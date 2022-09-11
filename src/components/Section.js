@@ -1,6 +1,8 @@
 import React from 'react'
 import  styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
+import Arrow from "./images/down-arrow.svg"
+
 function Section({title , description,leftButtonTtext,rightButtonText,backgroundImg}) {
   return (
     <Wrap bgImage={backgroundImg}>
@@ -27,7 +29,7 @@ function Section({title , description,leftButtonTtext,rightButtonText,background
         
     </ButtonGroup>
     </Fade>
-    <DownArrow src = "images/down-arrow.svg"/>
+    <DownArrow src={Arrow}/>
     </Buttons>
     </Wrap>
   )
@@ -41,13 +43,13 @@ height: 100vh;
 background-size:cover;
 background-position :center;
 background-repeat :no-repeat;
+overflow:hidden;
 
-background-image: url('images/model-s.jpg');
 display:flex;
 flex-direction:column;
 justify-content:space-between;
 align-items:center;
-background-image:${props => `url("/images/${props.bgImage}")`}
+background-image:${props => `url("${props.bgImage}")`}
     
 
 
